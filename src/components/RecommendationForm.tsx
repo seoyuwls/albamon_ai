@@ -7,6 +7,7 @@ import {
   PERIOD_OPTIONS,
 } from '../data/options';
 import FormSelect from './FormSelect';
+import BudgetSlider from './BudgetSlider';
 import styles from './RecommendationForm.module.css';
 
 interface RecommendationFormProps {
@@ -19,7 +20,8 @@ const INITIAL: FormValues = {
   region: '',
   headcount: '',
   period: '',
-  budget: '',
+  budgetMin: 0,
+  budgetMax: 0,
 };
 
 export default function RecommendationForm({ onSubmit, isLoading }: RecommendationFormProps) {
@@ -28,9 +30,8 @@ export default function RecommendationForm({ onSubmit, isLoading }: Recommendati
   const set = (key: keyof FormValues) => (value: string) =>
     setValues((prev) => ({ ...prev, [key]: value }));
 
-  const handleBudget = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const raw = e.target.value.replace(/[^0-9]/g, '');
-    setValues((prev) => ({ ...prev, budget: raw }));
+  const handleBudget = (min: number, max: number) => {
+    setValues((prev) => ({ ...prev, budgetMin: min, budgetMax: max }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -38,7 +39,12 @@ export default function RecommendationForm({ onSubmit, isLoading }: Recommendati
     onSubmit(values);
   };
 
-  const hasAnyInput = Object.values(values).some((v) => v !== '');
+  const hasAnyInput =
+    values.jobType !== '' ||
+    values.region !== '' ||
+    values.headcount !== '' ||
+    values.period !== '' ||
+    values.budgetMax > 0;
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
@@ -74,20 +80,11 @@ export default function RecommendationForm({ onSubmit, isLoading }: Recommendati
         />
       </div>
 
-      <div className={styles.field}>
-        <label className={styles.label}>1일 예산</label>
-        <div className={styles.inputWrapper}>
-          <input
-            type="text"
-            inputMode="numeric"
-            className={styles.input}
-            placeholder="예: 50000"
-            value={values.budget ? Number(values.budget).toLocaleString() : ''}
-            onChange={handleBudget}
-          />
-          <span className={styles.unit}>원/일</span>
-        </div>
-      </div>
+      <BudgetSlider
+        min={values.budgetMin}
+        max={values.budgetMax}
+        onChange={handleBudget}
+      />
 
       <button
         type="submit"

@@ -104,13 +104,8 @@ const PRODUCT_POOL: Product[] = [
   },
 ];
 
-function parseBudget(budgetStr: string): number {
-  const num = parseInt(budgetStr.replace(/[^0-9]/g, ''), 10);
-  return isNaN(num) ? 0 : num;
-}
-
 export function getRecommendedProducts(values: FormValues): Product[] {
-  const budget = parseBudget(values.budget);
+  const budget = values.budgetMax;
   const isShortPeriod = ['1week', '2weeks'].includes(values.period);
   const isLargeHeadcount = ['6-10', '11+'].includes(values.headcount);
 

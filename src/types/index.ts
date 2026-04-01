@@ -3,7 +3,8 @@ export interface FormValues {
   region: string;
   headcount: string;
   period: string;
-  budget: string;
+  budgetMin: number;
+  budgetMax: number;
 }
 
 export interface Product {
