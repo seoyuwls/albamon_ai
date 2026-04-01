@@ -47,6 +47,11 @@ export default function App() {
         {hasResult && (
           <ResultSection products={products} />
         )}
+
+        {/* Disclaimer */}
+        <p className={styles.disclaimer}>
+          * 이 화면은 시연용 페이지입니다. 실제 알바몬 서비스와 무관하며, 추천 결과를 구매 판단에 활용하지 마세요.
+        </p>
       </div>
     </div>
   );
