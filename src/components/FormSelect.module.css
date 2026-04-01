@@ -1,0 +1,50 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-family: inherit;
+  padding: 11px 40px 11px 13px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.select:focus {
+  border-color: #FF5F00;
+}
+
+.select option[value=""] {
+  color: #aaa;
+}
+
+.arrow {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+}

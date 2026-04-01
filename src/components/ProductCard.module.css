@@ -1,0 +1,235 @@
+.card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+
+.topCard {
+  border-color: #FF5F00;
+  border-width: 2px;
+}
+
+.topBadge {
+  position: absolute;
+  top: -11px;
+  left: 16px;
+  background: #FF5F00;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.2px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.tagRed {
+  background: #fff0ee;
+  color: #FF5F00;
+}
+
+.tagOrange {
+  background: #fff5e0;
+  color: #e08000;
+}
+
+.tagBlue {
+  background: #eef2ff;
+  color: #4f60e8;
+}
+
+.name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1a1a1a;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.priceUnit {
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+  margin-left: 2px;
+}
+
+/* Guarantee */
+.guarantee {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff8f5;
+  border: 1px solid #ffd4bc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #333;
+}
+
+.guaranteeIcon {
+  font-size: 14px;
+}
+
+.guarantee strong {
+  color: #FF5F00;
+}
+
+/* ROI Row */
+.roiRow {
+  display: flex;
+  align-items: center;
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 12px 0;
+}
+
+.roiItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.roiDivider {
+  width: 1px;
+  height: 28px;
+  background: #e0e0e0;
+}
+
+.roiLabel {
+  font-size: 11px;
+  color: #999;
+}
+
+.roiValue {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Highlights */
+.highlights {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: #555;
+}
+
+.checkIcon {
+  color: #FF5F00;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Platforms */
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.platform {
+  font-size: 11px;
+  color: #777;
+  background: #f3f3f3;
+  border-radius: 4px;
+  padding: 3px 8px;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.detailBtn {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.detailBtn:hover {
+  background: #f5f5f5;
+}
+
+.applyBtn {
+  flex: 2;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #f0f0f0;
+  color: #555;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.applyBtn:hover {
+  background: #e0e0e0;
+}
+
+.applyBtnPrimary {
+  background: #FF5F00;
+  color: #fff;
+}
+
+.applyBtnPrimary:hover {
+  background: #e85500;
+}

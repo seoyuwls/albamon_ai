@@ -1,0 +1,36 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeInUp 0.35s ease both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.summary {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.summaryText {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.summaryText strong {
+  color: #FF5F00;
+  font-size: 15px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

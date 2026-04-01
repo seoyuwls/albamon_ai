@@ -1,0 +1,66 @@
+.page {
+  min-height: 100vh;
+  background: #f5f6f8;
+  padding: 40px 16px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 4px 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: #fff0ee;
+  color: #FF5F00;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid #ffd4bc;
+}
+
+.badge::before {
+  content: '✦';
+  font-size: 9px;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+}
+
+.heroSub {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Form Card */
+.card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 24px 20px;
+}

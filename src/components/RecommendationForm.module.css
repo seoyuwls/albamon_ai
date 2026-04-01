@@ -1,0 +1,109 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-family: inherit;
+  padding: 11px 55px 11px 13px;
+  outline: none;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #FF5F00;
+}
+
+.input::placeholder {
+  color: #bbb;
+}
+
+.unit {
+  position: absolute;
+  right: 13px;
+  font-size: 13px;
+  color: #aaa;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.button {
+  margin-top: 4px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #FF5F00;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.button:hover:not(:disabled) {
+  background: #e85500;
+  transform: translateY(-1px);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  background: #ffb899;
+  cursor: not-allowed;
+}
+
+.loadingRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.spinner {
+  width: 17px;
+  height: 17px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
